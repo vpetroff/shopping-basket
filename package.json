@@ -1,0 +1,26 @@
+{
+  "name": "shopping-cart",
+  "version": "0.0.1",
+  "author": "Vladimir Petrov <vpetroff@hotmail.co.uk>",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars.numeral": "^0.2.0",
+    "hbs": "~4.0.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

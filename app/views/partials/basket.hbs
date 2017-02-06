@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping basket
+    </div>
+    <div class="panel-body container-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-right">Quantity</th>
+                    <th>Product</th>
+                    <th class="text-right">Unit price</th>
+                    <th class="text-right">Price</th>
+                </tr>
+            </thead>
+        {{#each cart.lines}}
+            <tr>
+                <td class="col-xs-2 text-right">{{quantity}}x</td>
+                <td class="col-xs-4">{{name}}</td>
+                <td class="col-xs-2 text-right">{{currency unitPrice}}</td>
+                <td class="col-xs-2 text-right">{{currency price}}</td>
+            </tr>
+        {{/each}}
+            <tr>
+                <td class="col-xs-10 text-right" colspan="3">Total discount</td>
+                <td class="col-xs-2 text-right">{{currency cart.discount}}</td>
+            </tr>
+            <tr>
+                <td class="col-xs-10 text-right" colspan="3">Total</td>
+                <td class="col-xs-2 text-right">{{currency cart.total}}</td>
+            </tr>
+        </table>
+
+    </div>
+</div>

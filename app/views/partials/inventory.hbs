@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-list" aria-hidden="true"></i> Inventory
+    </div>
+    <div class="panel-body container-fluid">
+        <form class="form-horizontal" action="/" method="post">
+            {{#each products}}
+                <div class="form-group">
+                    <div class="col-xs-2">
+                        <input type="number" class="form-control" min="0" name="{{@index}}" value="{{lookup @root.selectedProducts @index}}">
+                    </div>
+                    <div class="col-xs-10">{{this.name}} ({{currency this.price}} each)</div>
+                </div>
+            {{/each}}
+
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-primary">Scan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
